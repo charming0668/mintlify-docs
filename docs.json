@@ -1,72 +1,60 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
+  "theme": "willow",
+  "name": "具身智能知识花园",
   "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#284b63",
+    "light": "#7c7474",
+    "dark": "#484747"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Schibsted Grotesk"
+    },
+    "body": {
+      "family": "Source Sans Pro"
+    }
+  },
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "论文精读",
+        "groups": [
+          {
+            "group": "概览",
+            "pages": ["index"]
+          },
+          {
+            "group": "实时控制与推理加速",
+            "pages": [
+              "papers/realtime-vla-v2",
+              "papers/vlash",
+              "papers/faster"
+            ]
+          },
+          {
+            "group": "人类视频与数据扩展",
+            "pages": [
+              "papers/egovla",
+              "papers/egoscale"
+            ]
+          },
+          {
+            "group": "自改进与世界模型",
+            "pages": [
+              "papers/pld",
+              "papers/rynnvla-002"
+            ]
+          },
+          {
+            "group": "时序建模",
+            "pages": [
+              "papers/streampi"
+            ]
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

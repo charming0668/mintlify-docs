@@ -1,20 +1,86 @@
 ---
-title: "Introduction"
-description: "Welcome to your project"
+title: 具身智能知识花园：VLA 论文精读合集
+sidebarTitle: 首页
+description: 聚焦具身智能、VLA 模型与灵巧操作前沿，收录 8 篇顶会/顶刊论文深度解读，涵盖实时推理加速、人类视频学习、自改进飞轮与时序建模四大主题。
 ---
 
-Write a short description of your product here. What it does, who it's for, and what they can accomplish with it.
+欢迎来到**具身智能知识花园**。这里是一个专注于 Vision-Language-Action（VLA）模型与灵巧机器人操作研究的深度阅读空间。我们精选来自 MIT、港大、英伟达、阿里达摩院等顶尖团队的前沿论文，以结构化的方式呈现每篇工作的核心洞察、技术亮点与工程实现细节，帮助研究者与工程师快速把握具身智能最新进展。
 
-<Tip>
-  Ready to make this your own? Start by editing this page. Update your `docs.json` file to customize your site. Then fill out the [Quickstart](/quickstart) page.
-</Tip>
+## 探索方向
 
-<Card title="Quickstart" icon="rocket" href="/quickstart">
-  This card links to the quickstart page in your project.
-</Card>
-<Card title="Components" icon="puzzle-piece" href="https://mintlify.com/docs/components">
-  Add cards, callouts, steps, tabs, and more to design and structure your pages.
-</Card>
-<Card title="Settings" icon="gear" href="https://mintlify.com/docs/organize/settings">
-  Set your site name, branding, and navigation in the `docs.json` file.
-</Card>
+<CardGroup cols={2}>
+  <Card title="实时控制与推理加速" icon="bolt" href="/papers/realtime-vla-v2">
+    攻克 VLA 落地速度瓶颈：端云解耦后处理、未来状态感知异步推理、视界感知调度，三支团队三条路径，共同逼近机器人执行速度上限。
+  </Card>
+  <Card title="人类视频与数据扩展" icon="eye" href="/papers/egovla">
+    以数十亿小时第一人称人类视频为燃料，建立灵巧操作 Scaling Law，实现跨构型泛化与单样本涌现，让机器人向人类学习成为现实。
+  </Card>
+  <Card title="自改进与世界模型" icon="arrow-rotate-right" href="/papers/pld">
+    通过残差强化学习与动作世界模型，让 VLA 在部署中持续自我纠错、积累经验，形成无需人工干预的闭环改进飞轮。
+  </Card>
+  <Card title="时序建模" icon="timeline" href="/papers/streampi">
+    指令锚定式时序单元与增量 KV Cache 联手，零额外参数激活 VLA 完整时序与空间几何感知，破解动态交互瓶颈。
+  </Card>
+</CardGroup>
+
+## 全部论文
+
+### 实时控制与推理加速
+
+<CardGroup cols={2}>
+  <Card title="Realtime-VLA V2" icon="gauge-high" href="/papers/realtime-vla-v2">
+    **Dexmal 团队** · Dexmal
+
+    端云解耦后处理（OSQP 时间优化 + acados 空间 MPC）与亚毫秒级时延前置放大校准，提速超 3 倍逼近人类极限，提出机器人执行 Roofline 速度上限理论。
+  </Card>
+  <Card title="VLASH" icon="forward" href="/papers/vlash">
+    **韩松团队** · MIT
+
+    未来状态感知异步推理范式，通过已知动作前滚状态彻底消除预测-执行时序错位，真机反应延迟骤降最高 17.4 倍，首破极限动态交互任务。
+  </Card>
+  <Card title="FASTER" icon="rabbit-running" href="/papers/faster">
+    **赵恒爽团队** · 港大
+
+    颠覆流匹配恒定时间步范式，视界感知调度（HAS）与流式即解即发架构将 TTFA 提速超 3 倍，消费级显卡亦可驱动 30Hz 动态操作，刷新动态基准 SOTA。
+  </Card>
+</CardGroup>
+
+### 人类视频与数据扩展
+
+<CardGroup cols={2}>
+  <Card title="EgoVLA" icon="person-walking" href="/papers/egovla">
+    **斯坦福 / UC 伯克利** · 开源
+
+    利用 80 亿人类日常视频，结合 MANO 动作先验构建双臂灵巧操作大模型，将人类第一视角经验直接迁移至具身智能体。
+  </Card>
+  <Card title="EgoScale" icon="chart-line" href="/papers/egoscale">
+    **英伟达 & 伯克利**
+
+    20,854 小时第一人称视频预训练，首次确立灵巧操作对数线性 Scaling Law（$R^2=0.9983$），真机成功率提升 54%，单样本涌现泛化，跨构型赋能 G1 人形三指手。
+  </Card>
+</CardGroup>
+
+### 自改进与世界模型
+
+<CardGroup cols={2}>
+  <Card title="PLD" icon="recycle" href="/papers/pld">
+    **斯坦福**
+
+    Probe, Learn, Distill 三阶段自改进范式，轻量残差专家主动探测生成纠错轨迹，LIBERO 达 99.2% 饱和成功率，1 小时真实 GPU 拔插装配零人工干预。
+  </Card>
+  <Card title="RynnVLA-002" icon="globe" href="/papers/rynnvla-002">
+    **阿里达摩院**
+
+    动作世界模型（Action World Model）统一架构，攻克自回归动作误差级联；LIBERO 达 97.4% SOTA，真机 SO100 抗干扰成功率超传统基线 30%。
+  </Card>
+</CardGroup>
+
+### 时序建模
+
+<CardGroup cols={1}>
+  <Card title="StreamPI" icon="stream" href="/papers/streampi">
+    **北京大学 / 商汤科技**
+
+    指令锚定式时序建模与原子时序单元，零额外参数激活 VLA 完整时序与空间几何感知；增量 KV Cache 加速推理，真机 80% 破解三仙归洞猜球，LIBERO 达 98.3% 刷新纪录。
+  </Card>
+</CardGroup>

@@ -1,0 +1,73 @@
+{
+  "projectType": "general",
+  "projectName": "具身智能知识花园",
+  "projectDescription": "A curated knowledge garden of in-depth paper analyses focused on embodied intelligence, Vision-Language-Action (VLA) models, and dexterous robotic manipulation research.",
+  "theme": "willow",
+  "primaryColor": "#284b63",
+  "lightColor": "#7c7474",
+  "darkColor": "#484747",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "论文精读",
+        "groups": [
+          {
+            "group": "概览",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "实时控制与推理加速",
+            "pages": [
+              "papers/realtime-vla-v2",
+              "papers/vlash",
+              "papers/faster"
+            ]
+          },
+          {
+            "group": "人类视频与数据扩展",
+            "pages": [
+              "papers/egovla",
+              "papers/egoscale"
+            ]
+          },
+          {
+            "group": "自改进与世界模型",
+            "pages": [
+              "papers/pld",
+              "papers/rynnvla-002"
+            ]
+          },
+          {
+            "group": "时序建模",
+            "pages": [
+              "papers/streampi"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "深度论文精读，涵盖核心方法、架构与实验结果",
+    "具身智能 VLA 模型技术追踪",
+    "实时控制、异步推理与轨迹优化专题",
+    "人类视频预训练与数据 Scaling 研究",
+    "自改进数据飞轮与残差强化学习分析",
+    "世界模型与动作世界模型前沿解读",
+    "流式多模态时序建模技术解析",
+    "中英双语论文解读，含 Mermaid 流程图与公式"
+  ],
+  "publicApiSurface": [
+    "content/index.md — 知识花园导航首页",
+    "content/paper_2507.12440/EgoVLA_论文解读.md — EgoVLA 论文精读",
+    "content/paper_2511.00091/PLD_论文解读.md — PLD 论文精读",
+    "content/paper_2511.17502/RynnVLA-002_论文解读.md — RynnVLA-002 论文精读",
+    "content/paper_2512.01031/VLASH_论文解读.md — VLASH 论文精读",
+    "content/paper_2602.16710/EgoScale_论文解读.md — EgoScale 论文精读",
+    "content/paper_2603.19199/FASTER_论文解读.md — FASTER 论文精读",
+    "content/paper_2603.26360/Realtime-VLA-V2_论文解读.md — Realtime-VLA V2 论文精读",
+    "content/paper_2608.26067/StreamPI_论文解读.md — StreamPI 论文精读"
+  ]
+}
