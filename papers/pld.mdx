@@ -1,7 +1,7 @@
 ---
 title: 'PLD：基于残差强化学习的 VLA 自改进数据飞轮'
 sidebarTitle: 'PLD'
-description: '深度解读 PLD 三阶段自改进闭环：通过冻结 VLA 主干训练轻量残差专家（阶段一）、基准策略主动探测生成富含状态恢复行为的混合轨迹（阶段二）、架构无关离线蒸馏微调（阶段三），无需额外人工示教即可驱动 VLA 自主进化，在 LIBERO 达到 99.2% 成功率。'
+description: '深度解读 PLD 三阶段闭环：冻结 VLA 主干训练残差专家、基准策略主动探测生成恢复轨迹、架构无关蒸馏微调，无需人工示教驱动 VLA 自主进化，LIBERO 达 99.2%。'
 ---
 
 本文深度解读论文 **Self-Improving Vision-Language-Action Models with Data Generation via Residual RL（PLD）**，涵盖研究背景与痛点、三阶段核心方法（残差专家获取、基准策略主动探测、架构无关蒸馏微调）、在 LIBERO / SimplerEnv / 真实机械臂上的全面实验结果、消融分析，以及局限性与未来方向。论文来自 NVIDIA GEAR 实验室、卡内基梅隆大学、UC Berkeley 等机构，arXiv 编号 2511.00091。
